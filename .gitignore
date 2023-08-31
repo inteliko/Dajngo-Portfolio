@@ -1,6 +1,4 @@
-.vercel
-*.log
-*.pyc
-__pycache__
-media
-
+*.env
+bin/
+lib/
+*.sqlite3
