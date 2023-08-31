@@ -1,4 +1,3 @@
-#!/bin/bash
 
 echo 'Building the project...'
 pip install -r requirements.txt
