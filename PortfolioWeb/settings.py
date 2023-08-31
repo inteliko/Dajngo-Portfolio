@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os 
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -76,10 +78,17 @@ WSGI_APPLICATION = 'PortfolioWeb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '8WDtbtxDQgGBcsgvlA6D',
+        'HOST': 'containers-us-west-114.railway.app',
+        'PORT': '6163',
+        
     }
 }
+
+DATABASES['default'] = dj_database_url.config()
 
 
 # Password validation
